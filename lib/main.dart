@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voupedir/tela_login.dart';
 import 'package:voupedir/usuario.dart';
 import 'restaurante.dart';
 import 'tipo.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
 
-    Usuario u = new Usuario(
+    /*Usuario u = new Usuario(
       codigo: 1,
       login: "Rodolfo123",
       nome: "Rodolfo",
@@ -37,26 +38,11 @@ class MyApp extends StatelessWidget {
       longitude: "",
       proprietario: u,
       tipo: t
-    );
+    );*/
 
     return MaterialApp(
-      home:Scaffold(
-          appBar: AppBar(
-            title: const Text("Meus dados"),
-      ),
-      body: Center(
-        child: Padding(padding:const EdgeInsets.all(18.0),
-          child: Column(
-           children: [
-             Text("Nome:${u.nome}"),
-             Text("Código:${u.codigo}"),
-             Text("Login:${u.login}"),
-             Text("Senha:${u.senha}"),
-          ],
-        ),
-        ),
-      ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: TelaLogin(),
     );
   }
 }
